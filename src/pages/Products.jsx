@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Add from "./Add";
 
 const Products = () => {
 
@@ -156,26 +157,28 @@ const Products = () => {
 
 
 
-                  <div
-        className={`fixed top-0 right-0 h-full bg-white shadow-lg transform ${
+                  <div className={`add_container transform ${
           isDrawerOpen ? 'translate-x-0' : 'translate-x-full'
-        } transition-transform duration-300 ease-in-out w-80`}
-      >
-        <div className="p-4">
-          <h2 className="text-xl font-semibold">Side Drawer</h2>
-          <button onClick={toggleDrawer} className="mt-4 text-red-500">
-            Close Drawer
-          </button>
-          {/* Drawer content goes here */}
-        </div>
-      </div>
+        } transition-transform duration-300 ease-in-out w-80`}>
+                        <div className="">
+                          <h2 className="text-xl font-semibold">Side Drawer</h2>
+                          <button onClick={toggleDrawer} className="mt-4 text-red-500">
+                            Close Drawer
+                          </button>
+                          {/* Drawer content goes here */
+                          <Add/>
+                          }
+                        </div>
+                </div>
 
-      {/* Overlay */}
+      {/* Overlay */
+      }
       {isDrawerOpen && (
         <div
           className="fixed inset-0 bg-black opacity-50"
           onClick={toggleDrawer}
-        ></div>
+        >
+        </div>
       )}
 
 

@@ -41,13 +41,6 @@ const App = () => {
         <Route path="/store-customization" element={<StoreCustom />} />
         <Route path="/store-setttings" element={<StoreSet />} />
         <Route path="/add" element={<Add />} />
-        
-
-        
-
-        
-        
-
       </Routes>
     </Sidebar>
   </Router>
